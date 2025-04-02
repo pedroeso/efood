@@ -5,7 +5,9 @@ export const cores = {
   preta: '#111111',
   cinza: '#333',
   verde: '#10AC84',
-  cinzaClaro: '#A3A3A3'
+  cinzaClaro: '#A3A3A3',
+  laranja: '#E66767',
+  pastel: '#FFEBD9'
 }
 
 export const GlobalCss = createGlobalStyle`
@@ -18,15 +20,14 @@ export const GlobalCss = createGlobalStyle`
   }
 
     body {
-      background-color: ${cores.preta};
+      background-color: ${cores.pastel};
       color: ${cores.branca};
-      padding-top: 40px;
   }
 
   .container {
     max-width: 1024px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0;
   }
 `
 
