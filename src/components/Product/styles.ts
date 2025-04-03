@@ -5,10 +5,6 @@ import { TagContainer } from '../Tag/styles'
 export const Card = styled.div`
   background-color: ${cores.branca};
   position: relative;
-
-  ${TagContainer} {
-    margin-right: 8px;
-  }
 `
 
 export const Titulo = styled.h3`
@@ -30,7 +26,14 @@ export const Descricao = styled.p`
 export const Infos = styled.div`
   position: absolute;
   top: 16px;
-  right: 16px;
+  right: 20px;
+`
+
+export const Promo = styled.div`
+  position: absolute;
+  top: 16px;
+  right: 80px;
+  padding-right: 12px;
 `
 
 export const ProductImage = styled.img`

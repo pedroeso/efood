@@ -1,6 +1,7 @@
+import { Key } from 'react'
 import Tag from '../Tag'
 
-import { Card, Descricao, Titulo, Infos, ProductImage } from './styles'
+import { Card, Descricao, Titulo, Infos, ProductImage, Promo } from './styles'
 
 type Props = {
   title: string
@@ -9,16 +10,10 @@ type Props = {
   description: string
   infos: string[]
   image: string
+  promo: string[]
 }
 
-const Product = ({
-  title,
-  category,
-  system,
-  description,
-  infos,
-  image
-}: Props) => (
+const Product = ({ title, description, infos, image, promo }: Props) => (
   <Card>
     <ProductImage src={image} alt={title} />
     <Infos>
@@ -26,9 +21,12 @@ const Product = ({
         <Tag key={info}>{info}</Tag>
       ))}
     </Infos>
+    <Promo>
+      {promo.map((promo) => (
+        <Tag key={promo}>{promo}</Tag>
+      ))}
+    </Promo>
     <Titulo>{title}</Titulo>
-    <Tag>{category}</Tag>
-    <Tag>{system}</Tag>
     <Descricao>{description}</Descricao>
   </Card>
 )

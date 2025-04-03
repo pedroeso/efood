@@ -21,6 +21,7 @@ const ProductList = ({ background, title, games }: Props) => (
             description={game.description}
             image={game.image}
             infos={game.infos}
+            promo={game.promo || []}
             system={game.system}
             title={game.title}
           />

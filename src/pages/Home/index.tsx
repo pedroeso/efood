@@ -13,6 +13,7 @@ const emBreve: Game[] = [
     title: 'Hioki Sushi ',
     system: 'Windows',
     infos: ['Japonesa'],
+    promo: ['Destaques da semana'],
     image: sushi
   },
   {
@@ -22,7 +23,7 @@ const emBreve: Game[] = [
       'Diablo IV é um RPG de ação em desenvolvimento pela Blizzard Entertainment.',
     title: 'Zelda',
     system: 'Windows',
-    infos: ['17/05'],
+    infos: ['Italiana'],
     image: macarao
   },
   {
@@ -32,7 +33,7 @@ const emBreve: Game[] = [
       'Diablo IV é um RPG de ação em desenvolvimento pela Blizzard Entertainment.',
     title: 'Star Wars',
     system: 'Windows',
-    infos: ['17/05'],
+    infos: ['Italiana'],
     image: macarao
   },
   {
@@ -42,7 +43,7 @@ const emBreve: Game[] = [
       'Diablo IV é um RPG de ação em desenvolvimento pela Blizzard Entertainment.',
     title: 'Resident Evil 4',
     system: 'Nintendo Switch',
-    infos: ['17/05'],
+    infos: ['Italiana'],
     image: macarao
   }
 ]
