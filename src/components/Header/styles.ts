@@ -49,8 +49,8 @@ export const LinkDois = styled.li`
   text-decoration: none;
   font-weight: bold;
   font-size: 36px;
-  margin-right: 480px;
-  margin-left: 480px;
+  margin-right: 414px;
+  margin-left: 414px;
   align-items: center;
   text-align: center;
   display: block;
