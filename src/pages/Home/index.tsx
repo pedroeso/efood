@@ -14,37 +14,30 @@ const emBreve: Game[] = [
     system: 'Windows',
     infos: ['Japonesa'],
     promo: ['Destaques da semana'],
-    image: sushi
+    image: sushi,
+    titulodois: ['4.9']
   },
   {
     id: 6,
     category: 'RPG',
     description:
-      'Diablo IV é um RPG de ação em desenvolvimento pela Blizzard Entertainment.',
-    title: 'Zelda',
-    system: 'Windows',
+      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!.',
+    title: 'La Dolce Vita Trattoria',
+    system: 'Italiana',
     infos: ['Italiana'],
-    image: macarao
+    image: macarao,
+    titulodois: ['4.6']
   },
   {
-    id: 7,
+    id: 6,
     category: 'RPG',
     description:
-      'Diablo IV é um RPG de ação em desenvolvimento pela Blizzard Entertainment.',
-    title: 'Star Wars',
-    system: 'Windows',
+      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!.',
+    title: 'La Dolce Vita Trattoria',
+    system: 'Italiana',
     infos: ['Italiana'],
-    image: macarao
-  },
-  {
-    id: 8,
-    category: 'RPG',
-    description:
-      'Diablo IV é um RPG de ação em desenvolvimento pela Blizzard Entertainment.',
-    title: 'Resident Evil 4',
-    system: 'Nintendo Switch',
-    infos: ['Italiana'],
-    image: macarao
+    image: macarao,
+    titulodois: ['4.6']
   }
 ]
 

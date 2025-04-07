@@ -8,7 +8,7 @@ export const Card = styled.div`
 `
 
 export const Titulo = styled.h3`
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   display: block;
   margin-top: 16px;
@@ -41,3 +41,16 @@ export const ProductImage = styled.img`
   height: auto;
   display: block;
 `
+
+export const RightTitle = styled.h3`
+  font-size: 18px;
+  font-weight: 700;
+  color: ${cores.laranja};
+  position: absolute;
+  top: 230px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+`
+export const Icone = styled.img``

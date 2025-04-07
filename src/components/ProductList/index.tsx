@@ -5,6 +5,7 @@ import { Container, List } from './styles'
 
 export type Props = {
   title: string
+
   background: 'vanilla'
   games: Game[]
 }
@@ -24,6 +25,7 @@ const ProductList = ({ background, title, games }: Props) => (
             promo={game.promo || []}
             system={game.system}
             title={game.title}
+            titulodois={game.titulodois}
           />
         ))}
       </List>
