@@ -10,7 +10,9 @@ import {
   ProductImage,
   Promo,
   RightTitle,
-  Icone
+  Icone,
+  Botao,
+  Dois
 } from './styles'
 
 type Props = {
@@ -34,22 +36,25 @@ const Product = ({
 }: Props) => (
   <Card>
     <ProductImage src={image} alt={title} />
-    <Infos>
-      {infos.map((info) => (
-        <Tag key={info}>{info}</Tag>
-      ))}
-    </Infos>
-    <Promo>
-      {promo.map((promo) => (
-        <Tag key={promo}>{promo}</Tag>
-      ))}
-    </Promo>
-    <RightTitle>
-      {titulodois}
-      <Icone src={icon} alt="Ícone" width="100%" className="icone" />
-    </RightTitle>
-    <Titulo>{title}</Titulo>
-    <Descricao>{description}</Descricao>
+    <Dois>
+      <Infos>
+        {infos.map((info) => (
+          <Tag key={info}>{info}</Tag>
+        ))}
+      </Infos>
+      <Promo>
+        {promo.map((promo) => (
+          <Tag key={promo}>{promo}</Tag>
+        ))}
+      </Promo>
+      <RightTitle>
+        {titulodois}
+        <Icone src={icon} alt="Ícone" width="100%" className="icone" />
+      </RightTitle>
+      <Titulo>{title}</Titulo>
+      <Descricao>{description}</Descricao>
+      <Botao>Saiba mais</Botao>
+    </Dois>
   </Card>
 )
 

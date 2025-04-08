@@ -38,6 +38,39 @@ const emBreve: Game[] = [
     infos: ['Italiana'],
     image: macarao,
     titulodois: ['4.6']
+  },
+  {
+    id: 6,
+    category: 'RPG',
+    description:
+      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!.',
+    title: 'La Dolce Vita Trattoria',
+    system: 'Italiana',
+    infos: ['Italiana'],
+    image: macarao,
+    titulodois: ['4.6']
+  },
+  {
+    id: 6,
+    category: 'RPG',
+    description:
+      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!.',
+    title: 'La Dolce Vita Trattoria',
+    system: 'Italiana',
+    infos: ['Italiana'],
+    image: macarao,
+    titulodois: ['4.6']
+  },
+  {
+    id: 6,
+    category: 'RPG',
+    description:
+      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!.',
+    title: 'La Dolce Vita Trattoria',
+    system: 'Italiana',
+    infos: ['Italiana'],
+    image: macarao,
+    titulodois: ['4.6']
   }
 ]
 
