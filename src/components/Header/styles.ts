@@ -32,6 +32,9 @@ export const HeaderBar = styled.header`
 export const BackgroundImage = styled.img`
   width: 100px;
 `
+export const Fundo = styled.img`
+  width: 100%; /* Faz a imagem ocupar toda a largura */
+`
 
 export const Link = styled.li`
   aling-items: center;

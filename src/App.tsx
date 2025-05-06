@@ -10,6 +10,7 @@ function App() {
   return (
     <BrowserRouter>
       <GlobalCss />
+
       <Header />
 
       <Rotas />
