@@ -29,11 +29,69 @@ export const HeaderBar = styled.header`
     align-items: center;
   }
 `
+export const FundoWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  display: flex;
+`
+export const TituloCardapio = styled.h2`
+  position: absolute;
+  color: #ffffff; // ou outra cor que contraste com a imagem
+  font-size: 32px;
+  font-weight: 100;
+  padding-top: 25px;
+  padding-bottom: 32px;
+  padding-left: 170px;
+`
+
+export const FundoTexto = styled.h3`
+  position: absolute;
+  color: #ffffff; // ou outra cor que contraste com a imagem
+  font-size: 32px;
+  font-weight: 900;
+  padding-top: 189px;
+  padding-bottom: 32px;
+  padding-left: 170px;
+`
+
+export const PequenoTexto = styled.h3`
+  font-size: 18px;
+  font-weight: 900;
+  color: #e66767;
+`
+
 export const BackgroundImage = styled.img`
   width: 100px;
 `
-export const Fundo = styled.img`
-  width: 100%; /* Faz a imagem ocupar toda a largura */
+
+export const Cabecalho = styled.li`
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+`
+
+export const BackgroundImageWrapper = styled.div`
+  position: relative;
+  width: 100%
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000000;
+    opacity: 0.5;
+    pointer-events: none;
+  }
 `
 
 export const Link = styled.li`

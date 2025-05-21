@@ -1,11 +1,19 @@
-import { Fundo } from '../../components/Header/styles'
-
+import {
+  FundoWrapper,
+  FundoTexto,
+  BackgroundImageWrapper,
+  TituloCardapio
+} from '../../components/Header/styles'
 import apresentacao from '../../assets/images/apresentacao.png'
 
 const Categories = () => (
-  <>
-    <Fundo src={apresentacao} alt="Apresentação" />
-  </>
+  <FundoWrapper>
+    <BackgroundImageWrapper>
+      <img src={apresentacao} alt="Apresentação" />
+    </BackgroundImageWrapper>
+    <TituloCardapio>Italiana</TituloCardapio>
+    <FundoTexto>La Dolce Vita Trattoria</FundoTexto>
+  </FundoWrapper>
 )
 
 export default Categories
