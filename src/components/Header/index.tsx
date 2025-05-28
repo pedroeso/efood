@@ -19,32 +19,17 @@ const Header = () => {
     <HeaderBar>
       <div>
         <nav>
-          {location.pathname === '/categories' ? (
-            <Link to="/categories">
-              <LinkItem>
-                <PequenoTexto>123123</PequenoTexto>
-              </LinkItem>
-              <img src={logo} alt="EPLAY" />
-              <LinkItem>
-                <PequenoTexto>123123</PequenoTexto>
-              </LinkItem>
-            </Link>
-          ) : (
-            <Link to="/">
-              <img src={logo} alt="EPLAY" />
-            </Link>
-          )}
-          {location.pathname === '/categories' ? (
-            <Links></Links>
-          ) : (
-            <Links>
-              <LinkItem>
-                <LinkDois>
-                  Viva experiências gastronômicas no conforto da sua casa
-                </LinkDois>
-              </LinkItem>
-            </Links>
-          )}
+          <Link to="/">
+            <img src={logo} alt="EPLAY" />
+          </Link>
+
+          <Links>
+            <LinkItem>
+              <LinkDois>
+                Viva experiências gastronômicas no conforto da sua casa
+              </LinkDois>
+            </LinkItem>
+          </Links>
         </nav>
       </div>
     </HeaderBar>

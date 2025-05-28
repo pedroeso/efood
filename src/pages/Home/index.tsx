@@ -3,6 +3,37 @@ import Game from '../../models/Game'
 
 import sushi from '../../assets/images/sushi.png'
 import macarao from '../../assets/images/macarao.png'
+import {
+  HeaderBar,
+  Link,
+  LinkDois,
+  LinkItem,
+  Links
+} from '../../components/Header/styles'
+import { useLocation } from 'react-router-dom'
+
+import logo from '../../assets/images/logo.png'
+
+const Header = () => {
+  return (
+    <HeaderBar>
+      <div>
+        <nav>
+          <Link>
+            <img src={logo} alt="EPLAY" />
+          </Link>
+          <Links>
+            <LinkItem>
+              <LinkDois>
+                Viva experiências gastronômicas no conforto da sua casa
+              </LinkDois>
+            </LinkItem>
+          </Links>
+        </nav>
+      </div>
+    </HeaderBar>
+  )
+}
 
 const emBreve: Game[] = [
   {
@@ -76,6 +107,7 @@ const emBreve: Game[] = [
 
 const Home = () => (
   <>
+    <Header />
     <ProductList games={emBreve} title="" background="vanilla" />
   </>
 )

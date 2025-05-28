@@ -95,7 +95,9 @@ export const BackgroundImageWrapper = styled.div`
 `
 
 export const Link = styled.li`
-  aling-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
 `
 
 export const Links = styled.ul`

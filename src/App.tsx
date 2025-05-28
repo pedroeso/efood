@@ -11,8 +11,6 @@ function App() {
     <BrowserRouter>
       <GlobalCss />
 
-      <Header />
-
       <Rotas />
 
       <Footer />
