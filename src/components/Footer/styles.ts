@@ -5,6 +5,8 @@ export const Container = styled.footer`
   background-color: ${cores.pastel};
   font-size: 14px;
   height: 298px;
+  padding-left: 171px;
+  padding-right: 171px;
 `
 export const Figura = styled.li`
   display: flex;

@@ -29,6 +29,22 @@ export const HeaderBar = styled.header`
     align-items: center;
   }
 `
+
+export const Barra = styled.header`
+  background-color: transparent;
+  background-image: url(${vectorImage});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 171px;
+  padding-right: 171px;
+  padding-bottom: 65px;
+  padding-top: 40px;
+`
+
 export const FundoWrapper = styled.div`
   position: relative;
   width: 100%;
@@ -98,6 +114,19 @@ export const Link = styled.li`
   display: flex;
   justify-content: center;
   margin-top: 40px;
+`
+
+export const Tipo = styled.li`
+  display: flex;
+  align-items: center;
+  width: 125px;
+  padding-left: 40px;
+`
+
+export const Nav = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `
 
 export const Links = styled.ul`
