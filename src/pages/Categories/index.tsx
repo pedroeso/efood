@@ -3,19 +3,16 @@ import {
   FundoTexto,
   BackgroundImageWrapper,
   TituloCardapio,
-  HeaderBar,
-  Link,
-  Links,
-  LinkItem,
-  LinkDois,
   PequenoTexto,
   Tipo,
-  Nav,
   Barra
 } from '../../components/Header/styles'
 import apresentacao from '../../assets/images/apresentacao.png'
 
 import logo from '../../assets/images/logo.png'
+import pizza from '../../assets/images/pizza.png'
+import Game from '../../models/Game'
+import ListaSecundaria from '../../components/ListaSecundaria'
 
 const Header = () => {
   return (
@@ -29,6 +26,81 @@ const Header = () => {
   )
 }
 
+const emBreve: Game[] = [
+  {
+    id: 5,
+    category: 'RPG',
+    description:
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
+    title: 'Pizza Marguerita',
+    system: 'Windows',
+    infos: ['Japonesa'],
+    promo: ['Destaques da semana'],
+    image: pizza,
+    titulodois: ['']
+  },
+  {
+    id: 5,
+    category: 'RPG',
+    description:
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
+    title: 'Pizza Marguerita',
+    system: 'Windows',
+    infos: ['Japonesa'],
+    promo: ['Destaques da semana'],
+    image: pizza,
+    titulodois: ['']
+  },
+  {
+    id: 5,
+    category: 'RPG',
+    description:
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
+    title: 'Pizza Marguerita',
+    system: 'Windows',
+    infos: ['Japonesa'],
+    promo: ['Destaques da semana'],
+    image: pizza,
+    titulodois: ['']
+  },
+  {
+    id: 5,
+    category: 'RPG',
+    description:
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
+    title: 'Pizza Marguerita',
+    system: 'Windows',
+    infos: ['Japonesa'],
+    promo: ['Destaques da semana'],
+    image: pizza,
+    titulodois: ['']
+  },
+  {
+    id: 5,
+    category: 'RPG',
+    description:
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
+    title: 'Pizza Marguerita',
+    system: 'Windows',
+    infos: ['Japonesa'],
+    promo: ['Destaques da semana'],
+    image: pizza,
+    titulodois: ['']
+  },
+  {
+    id: 5,
+    category: 'RPG',
+    description:
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
+    title: 'Pizza Marguerita',
+    system: 'Windows',
+    infos: ['Japonesa'],
+    promo: ['Destaques da semana'],
+    image: pizza,
+    titulodois: ['']
+  }
+]
+
 const Categories = () => (
   <>
     <Header />
@@ -39,6 +111,7 @@ const Categories = () => (
       <TituloCardapio>Italiana</TituloCardapio>
       <FundoTexto>La Dolce Vita Trattoria</FundoTexto>
     </FundoWrapper>
+    <ListaSecundaria games={emBreve} title="" background="vanilla" />
   </>
 )
 
