@@ -14,6 +14,7 @@ import {
   Botao,
   Dois
 } from './styles'
+import { Link } from 'react-router-dom'
 
 type Props = {
   title: string
@@ -53,7 +54,9 @@ const Product = ({
       </RightTitle>
       <Titulo>{title}</Titulo>
       <Descricao>{description}</Descricao>
-      <Botao>Saiba mais</Botao>
+      <Botao as={Link} to="/categories">
+        Saiba mais
+      </Botao>
     </Dois>
   </Card>
 )

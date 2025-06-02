@@ -5,16 +5,19 @@ import { GlobalCss } from './styles'
 
 import Rotas from './routes'
 import Footer from './components/Footer'
+import { CartProvider } from './components/CartContext'
 
 function App() {
   return (
-    <BrowserRouter>
-      <GlobalCss />
+    <CartProvider>
+      <BrowserRouter>
+        <GlobalCss />
 
-      <Rotas />
+        <Rotas />
 
-      <Footer />
-    </BrowserRouter>
+        <Footer />
+      </BrowserRouter>
+    </CartProvider>
   )
 }
 

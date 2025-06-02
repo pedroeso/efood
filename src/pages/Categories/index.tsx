@@ -13,15 +13,18 @@ import logo from '../../assets/images/logo.png'
 import pizza from '../../assets/images/pizza.png'
 import Game from '../../models/Game'
 import ListaSecundaria from '../../components/ListaSecundaria'
+import { useCart } from '../../components/CartContext'
 
 const Header = () => {
+  const { cartCount } = useCart()
+
   return (
     <Barra>
       <PequenoTexto>Restaurantes</PequenoTexto>
       <Tipo>
         <img src={logo} alt="EPLAY" />
       </Tipo>
-      <PequenoTexto>0 produto(s) no carrinho</PequenoTexto>
+      <PequenoTexto>{cartCount} produto(s) no carrinho</PequenoTexto>
     </Barra>
   )
 }

@@ -45,16 +45,23 @@ export const Promo = styled.div`
 `
 
 export const Botao = styled.button`
+  display: flex;
   background-color: ${cores.laranja};
   color: ${cores.pastel};
   font-size: 14px;
   font-weight: 700;
-  padding: 4px 6px;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   border: none;
   cursor: pointer;
   margin-top: 16px;
   margin-left: 8px;
   margin-bottom: 8px;
+  text-decoration: none;
+  width: 82px;
+  align-items: center;
 `
 
 export const ProductImage = styled.img`
