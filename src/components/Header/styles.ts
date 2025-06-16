@@ -66,7 +66,7 @@ export const FundoTexto = styled.h3`
   color: #ffffff; // ou outra cor que contraste com a imagem
   font-size: 32px;
   font-weight: 900;
-  padding-top: 214px;
+  padding-top: 170px;
   padding-bottom: 32px;
   padding-left: 170px;
 `
