@@ -66,7 +66,7 @@ export const FundoTexto = styled.h3`
   color: #ffffff; // ou outra cor que contraste com a imagem
   font-size: 32px;
   font-weight: 900;
-  padding-top: 170px;
+  top: 210px;
   padding-bottom: 32px;
   padding-left: 170px;
 `
@@ -90,13 +90,13 @@ export const Cabecalho = styled.li`
 export const BackgroundImageWrapper = styled.div`
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 280px;
 
   img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
-    display: block;
+    display: flex;
   }
 
   &::after {
