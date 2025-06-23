@@ -23,6 +23,7 @@ export const GlobalCss = createGlobalStyle`
     body {
       background-color: ${cores.pastel};
       color: ${cores.branca};
+      overflow-x: hidden;
   }
 
   .container {
