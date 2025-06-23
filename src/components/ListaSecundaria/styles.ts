@@ -7,7 +7,8 @@ export const Container = styled.section<Omit<Props, 'title' | 'games'>>`
   padding: 32px 0;
   background-color: ${cores.vanilla};
   display: flex;
-  justify-content: center;
+  padding-left: 171px;
+  padding-right: 171px;
 `
 
 export const List = styled.ul`
@@ -17,8 +18,6 @@ export const List = styled.ul`
   margin-top: 40px;
   row-gap: 32px;
   margin: 40px auto;
-  max-width: 1200px;
-  width: 100%;
 `
 
 export const Title = styled.h2`

@@ -69,6 +69,7 @@ export const FundoTexto = styled.h3`
   top: 210px;
   padding-bottom: 32px;
   padding-left: 170px;
+  width: 1024px;
 `
 
 export const PequenoTexto = styled.h3`
