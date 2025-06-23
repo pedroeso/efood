@@ -39,8 +39,8 @@ export const Barra = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 171px;
-  padding-right: 171px;
+  padding-left: 120px;
+  padding-right: 120px;
   padding-bottom: 65px;
   padding-top: 40px;
 `
@@ -59,7 +59,7 @@ export const TituloCardapio = styled.h2`
   font-weight: 100;
   padding-top: 25px;
   padding-bottom: 32px;
-  padding-left: 170px;
+  padding-left: 120px;
 `
 
 export const FundoTexto = styled.h3`
@@ -69,7 +69,7 @@ export const FundoTexto = styled.h3`
   font-weight: 900;
   top: 210px;
   padding-bottom: 32px;
-  padding-left: 170px;
+  padding-left: 120px;
   width: 1024px;
 `
 
