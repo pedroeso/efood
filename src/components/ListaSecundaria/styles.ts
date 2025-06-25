@@ -9,9 +9,19 @@ export const Container = styled.section<Omit<Props, 'title' | 'games'>>`
   display: flex;
 
   > .container {
-    width: 100%;
     /* ajuste conforme seu layout */
-    margin: 0 auto;
+    margin-left: 9.3vw;
+    margin-right: 9.3vw;
+
+    @media (min-width: 1025px) and (max-width: 1280px) {
+      margin-left: 9.3vw;
+      margin-right: 9.3vw;
+    }
+
+    @media (min-width: 1281px) {
+      margin-left: 16.1vw;
+      margin-right: 16.1vw;
+    }
   }
 `
 
@@ -21,7 +31,7 @@ export const List = styled.ul`
   column-gap: 32px;
   margin-top: 40px;
   row-gap: 32px;
-  margin: 40px auto;
+  margin: 40px 0;
 `
 
 export const Title = styled.h2`
