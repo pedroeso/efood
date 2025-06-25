@@ -39,10 +39,20 @@ export const Barra = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 120px;
-  padding-right: 120px;
+  padding-left: 16.1vw;
+  padding-right: 16.1vw;
   padding-bottom: 65px;
   padding-top: 40px;
+
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    padding-left: 9.3vw;
+    padding-right: 9.3vw;
+  }
+
+  @media (min-width: 1281px) {
+    padding-left: 16.1vw;
+    padding-right: 16.1vw;
+  }
 `
 
 export const FundoWrapper = styled.div`
@@ -59,7 +69,15 @@ export const TituloCardapio = styled.h2`
   font-weight: 100;
   padding-top: 25px;
   padding-bottom: 32px;
-  padding-left: 120px;
+  left: 16.1vw;
+
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    left: 9.3vw;
+  }
+
+  @media (min-width: 1281px) {
+    left: 16.1vw;
+  }
 `
 
 export const FundoTexto = styled.h3`
@@ -69,8 +87,15 @@ export const FundoTexto = styled.h3`
   font-weight: 900;
   top: 210px;
   padding-bottom: 32px;
-  padding-left: 120px;
-  width: 1024px;
+  left: 16.1vw;
+
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    left: 9.3vw;
+  }
+
+  @media (min-width: 1281px) {
+    left: 16.1vw;
+  }
 `
 
 export const PequenoTexto = styled.h3`

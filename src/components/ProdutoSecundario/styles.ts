@@ -6,7 +6,7 @@ export const Card = styled.div`
   position: relative;
   border: 8px solid ${cores.laranja};
   height: 342px;
-  width: 320px;
+  width: 100%;
 `
 export const Dois = styled.div`
   background-color: ${cores.laranja};

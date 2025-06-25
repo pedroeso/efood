@@ -7,15 +7,11 @@ export const Container = styled.section<Omit<Props, 'title' | 'games'>>`
   padding: 32px 0;
   background-color: ${cores.vanilla};
   display: flex;
-  padding-left: 32px;
-  padding-right: 32px;
 
   > .container {
     width: 100%;
-    max-width: 1366px; /* ajuste conforme seu layout */
+    /* ajuste conforme seu layout */
     margin: 0 auto;
-    padding-left: 32px;
-    padding-right: 32px;
   }
 `
 
@@ -26,7 +22,6 @@ export const List = styled.ul`
   margin-top: 40px;
   row-gap: 32px;
   margin: 40px auto;
-  max-width: 1024px;
 `
 
 export const Title = styled.h2`
@@ -42,8 +37,7 @@ export const Modal = styled.div`
   height: 100%;
   z-index: 1;
   display: none;
-  align-items: center;
-  justify-content: center;
+
 
   &.visivel {
     display: flex;
