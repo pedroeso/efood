@@ -45,13 +45,6 @@ export const Modal = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
-  display: none;
-
-
-  &.visivel {
-    display: flex;
-  }
 
   .overlay {
     position: absolute;
@@ -63,7 +56,7 @@ export const Modal = styled.div`
 `
 
 export const ModalContent = styled.div`
-  max-width: 960px;
+  max-width: 1024px;
   position: relative;
   z-index: 1;
 
@@ -71,25 +64,15 @@ export const ModalContent = styled.div`
     display: flex;
     justify-content: space-between;
     margin-bottom: 24px;
-
-    h4 {
-      font-size: 24px;
-      font-weight: bold;
-    }
   }
 
-  > img {
-    width: 100%;
+  h4 {
+    font-size: 18px;
+    font-weight: 900;
   }
 
-  img,
-  iframe {
+  img {
     display: block;
     max-width: 100%;
-  }
-
-  iframe {
-    width: 100%;
-    height: 480px;
   }
 `

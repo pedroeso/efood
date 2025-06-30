@@ -2,9 +2,10 @@ import { useState } from 'react'
 import Game from '../../models/Game'
 import ProdutoSecundario from '../ProdutoSecundario'
 
-import { Container, List } from './styles'
+import { Container, List, Modal, ModalContent } from './styles'
 
 import fundo from '../../assets/images/fundo.png'
+import fechar from '../../assets/images/fechar.png'
 
 type ModalState = {
   isVisible: boolean
@@ -20,11 +21,11 @@ export type Props = {
 }
 
 const ListaSecundaria = ({ title, background, games }: Props) => {
-  const [modal, setModal] = useState<ModalState>({
-    isVisible: false,
-    type: 'image',
-    url: ''
-  })
+  // const [modal, setModal] = useState<ModalState>({
+  //   isVisible: false,
+  //   type: 'image',
+  //   url: ''
+  // })
   return (
     <>
       <Container background={background}>
@@ -42,6 +43,16 @@ const ListaSecundaria = ({ title, background, games }: Props) => {
               />
             ))}
           </List>
+          <Modal>
+            <ModalContent className="container">
+              <header>
+                <h4>Pizza Marguerita</h4>
+                <img src={fechar} alt="Ícone de fechar" />
+              </header>
+              <img src={fundo} alt="Fundo" />
+            </ModalContent>
+            <div className="overlay" />
+          </Modal>
         </div>
       </Container>
     </>
