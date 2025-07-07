@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { Props } from '.'
 import { cores } from '../../styles'
 
+import fundo from '../../assets/images/fundo.png'
+
 export const Container = styled.section<Omit<Props, 'title' | 'games'>>`
   padding: 32px 0;
   background-color: ${cores.vanilla};
@@ -45,6 +47,9 @@ export const Modal = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   .overlay {
     position: absolute;
@@ -57,22 +62,51 @@ export const Modal = styled.div`
 
 export const ModalContent = styled.div`
   max-width: 1024px;
+  min-height: 344px;
   position: relative;
   z-index: 1;
+  background-image: url(${fundo});
+  background-size: cover;
+  background-position: center;
+
+  img:first-child {
+    width: 100%;
+    display: block;
+  }
 
   header {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 24px;
+    position: static;
+    gap: 24px;
+    padding: 40px;
+    align-items: flex-start;
+    gap: 16px;
   }
 
   h4 {
     font-size: 18px;
     font-weight: 900;
+    margin: 0;
+    align-self: flex-start;
   }
+`
 
-  img {
-    display: block;
-    max-width: 100%;
-  }
+export const PizzaImg = styled.img`
+  max-width: 280px;
+  height: 280px;
+  object-fit: cover;
+`
+
+export const Texto = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 16px;
+`
+
+export const Info = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
 `
