@@ -26,6 +26,15 @@ type ModalState = {
   url: string
 }
 
+type Restaurante = {
+  id: number
+  titulo: string
+  tipo: string
+  avaliacao: number
+  descricao: string
+  capa: string
+}
+
 export type Props = {
   title: string
 
@@ -35,25 +44,28 @@ export type Props = {
 
 const ListaSecundaria = ({ title, background, games }: Props) => {
   const [modalAberto, setModalAberto] = useState(false)
-  // const [modal, setModal] = useState<ModalState>({
-  //   isVisible: false,
-  //   type: 'image',
-  //   url: ''
-  // })
+  const [restaurantes, setRestaurantes] = useState<Restaurante[]>([])
+
+  useEffect(() => {
+    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
+      .then((res) => res.json())
+      .then((data) => setRestaurantes(data))
+  }, [])
+
   return (
     <>
       <Container background={background}>
         <div className="container">
           <h2>{title}</h2>
           <List>
-            {games.map((game) => (
+            {restaurantes.map((restaurante) => (
               <ProdutoSecundario
-                key={game.id}
-                category={game.category}
-                description={game.description}
-                image={game.image}
-                system={game.system}
-                title={game.title}
+                key={restaurante.id}
+                category={restaurante.tipo}
+                description={restaurante.descricao}
+                image={restaurante.capa}
+                system=""
+                title={restaurante.titulo}
                 onAddToCart={() => setModalAberto(true)}
               />
             ))}

@@ -56,8 +56,9 @@ export const Botao = styled.button`
 
 export const ProductImage = styled.img`
   width: 100%;
-  height: auto;
+  height: 167px;
   display: block;
+  object-fit: cover;
 `
 
 export const RightTitle = styled.h3`
