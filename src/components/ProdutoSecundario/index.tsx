@@ -7,10 +7,11 @@ type Props = {
   system: string
   description: string
   image: string
+  onAddToCart: () => void
 }
 
-const Product = ({ title, description, image }: Props) => {
-  const { addToCart } = useCart()
+const Product = ({ title, description, image, onAddToCart }: Props) => {
+  // const { addToCart } = useCart()
 
   return (
     <Card>
@@ -18,7 +19,7 @@ const Product = ({ title, description, image }: Props) => {
       <Dois>
         <Titulo>{title}</Titulo>
         <Descricao>{description}</Descricao>
-        <Botao onClick={addToCart}>Adicionar ao carrinho</Botao>
+        <Botao onClick={onAddToCart}>Adicionar ao carrinho</Botao>
       </Dois>
     </Card>
   )

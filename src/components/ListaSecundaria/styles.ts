@@ -110,3 +110,27 @@ export const Info = styled.div`
   justify-content: flex-start;
   width: 100%;
 `
+
+export const BotaoTerciario = styled.button`
+  background-color: ${cores.pastel};
+  color: ${cores.laranja};
+  width: 218px;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 4px 6px;
+  border: none;
+  cursor: pointer;
+  margin-top: 16px;
+  margin-bottom: 8px;
+`
+
+export const CloseButton = styled.img`
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  bottom: 8px;
+  cursor: pointer;
+  z-index: 2;
+`
