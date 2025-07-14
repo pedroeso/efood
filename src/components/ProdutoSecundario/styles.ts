@@ -26,6 +26,20 @@ export const Descricao = styled.p`
   line-height: 22px;
   display: block;
   color: ${cores.pastel};
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; // número de linhas
+  -webkit-box-orient: vertical;
+  width: 100%;
+`
+
+export const Conteudo = styled.p`
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  display: block;
+  color: ${cores.pastel};
 `
 
 export const Infos = styled.div`

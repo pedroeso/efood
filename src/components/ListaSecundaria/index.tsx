@@ -17,7 +17,7 @@ import {
 import fundo from '../../assets/images/fundo.png'
 import fechar from '../../assets/images/fechar.png'
 import pizza from '../../assets/images/pizzadois.png'
-import { Descricao } from '../ProdutoSecundario/styles'
+import { Conteudo, Descricao } from '../ProdutoSecundario/styles'
 import { Botao } from '../ProdutoSecundario/styles'
 
 type ModalState = {
@@ -45,6 +45,7 @@ export type Props = {
 const ListaSecundaria = ({ title, background, games }: Props) => {
   const [modalAberto, setModalAberto] = useState(false)
   const [restaurantes, setRestaurantes] = useState<Restaurante[]>([])
+  const [produtoSelecionado, setProdutoSelecionado] = useState<any | null>(null)
 
   useEffect(() => {
     fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
@@ -58,26 +59,37 @@ const ListaSecundaria = ({ title, background, games }: Props) => {
         <div className="container">
           <h2>{title}</h2>
           <List>
-            {restaurantes.map((restaurante) => (
-              <ProdutoSecundario
-                key={restaurante.id}
-                category={restaurante.tipo}
-                description={restaurante.descricao}
-                image={restaurante.capa}
-                system=""
-                title={restaurante.titulo}
-                onAddToCart={() => setModalAberto(true)}
-              />
-            ))}
+            {restaurantes.flatMap((restaurante) =>
+              ((restaurante as any).cardapio ?? []).map((produto: any) => (
+                <ProdutoSecundario
+                  key={produto.id}
+                  category={restaurante.tipo}
+                  description={produto.descricao}
+                  image={produto.imagem || restaurante.capa}
+                  system=""
+                  title={produto.nome}
+                  onAddToCart={() => {
+                    setProdutoSelecionado({ ...produto, restaurante })
+                    setModalAberto(true)
+                  }}
+                />
+              ))
+            )}
           </List>
-          {modalAberto && (
+          {modalAberto && produtoSelecionado && (
             <Modal>
               <ModalContent className="container">
                 <header>
-                  <PizzaImg src={pizza} alt="Pizza" />
+                  <PizzaImg
+                    src={
+                      produtoSelecionado.imagem ||
+                      produtoSelecionado.restaurante.capa
+                    }
+                    alt={produtoSelecionado.nome}
+                  />
                   <Info>
                     <Texto>
-                      <h4>Pizza Marguerita</h4>
+                      <h4>{produtoSelecionado.nome}</h4>
                     </Texto>
                     <CloseButton
                       src={fechar}
@@ -85,24 +97,14 @@ const ListaSecundaria = ({ title, background, games }: Props) => {
                       onClick={() => setModalAberto(false)}
                     />
 
-                    <Descricao>
-                      A pizza Margherita é uma pizza clássica da culinária
-                      italiana, reconhecida por sua simplicidade e sabor
-                      inigualável. Ela é feita com uma base de massa fina e
-                      crocante, coberta com molho de tomate fresco, queijo
-                      mussarela de alta qualidade, manjericão fresco e azeite de
-                      oliva extra-virgem. A combinação de sabores é perfeita,
-                      com o molho de tomate suculento e ligeiramente ácido, o
-                      queijo derretido e cremoso e as folhas de manjericão
-                      frescas, que adicionam um toque de sabor herbáceo. É uma
-                      pizza simples, mas deliciosa, que agrada a todos os
-                      paladares e é uma ótima opção para qualquer ocasião
+                    <Conteudo>
+                      {produtoSelecionado.descricao}
                       <br />
                       <br />
-                      Serve: de 2 a 3 pessoas
-                    </Descricao>
+                      Serve: {produtoSelecionado.porcao}
+                    </Conteudo>
                     <BotaoTerciario>
-                      Adicionar ao carrinho - R$ 60,90
+                      Adicionar ao carrinho - {produtoSelecionado.preco}
                     </BotaoTerciario>
                   </Info>
                 </header>

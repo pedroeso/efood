@@ -19,6 +19,7 @@ const Product = ({ title, description, image, onAddToCart }: Props) => {
       <Dois>
         <Titulo>{title}</Titulo>
         <Descricao>{description}</Descricao>
+
         <Botao onClick={onAddToCart}>Adicionar ao carrinho</Botao>
       </Dois>
     </Card>
